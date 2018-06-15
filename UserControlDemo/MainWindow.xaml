@@ -21,12 +21,6 @@
 
             </WrapPanel>
         </TabItem>
-        
-        <TabItem Header="Draw Line">
-            <WrapPanel>
-                <local:CustomCtrl />
-                <Button Width="200" Height="30" VerticalAlignment="Bottom" Content="Get Data File" Click="Button_Click"/>
-            </WrapPanel>
-        </TabItem>
+
     </TabControl>
 </Window>

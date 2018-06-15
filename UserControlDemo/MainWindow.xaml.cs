@@ -92,28 +92,5 @@ namespace UserControlDemo
                 }
             }
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-            {
-                TextReader reader = new StreamReader(openFileDialog.FileName);
-                List<double> values = new List<double>();
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    //assuming that a single value per line
-                    values.Add(Convert.ToDouble(line));
-                    //if there are multiple value per line
-                    //use the Split() to chunk into parts
-                }
-
-                //user control is plotter and it uses a single double for a point
-                CustomCtrl.SetData(values.ToArray<double>());
-
-
-            }
-        }
     }
 }
